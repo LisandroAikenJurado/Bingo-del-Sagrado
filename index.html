@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo del Sagrado</title>
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <div class="page">
+    <header class="hero">
+      <div class="balls">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <h1>Bingo del Sagrado</h1>
+      <p class="subtitle">Tocá un número para marcarlo</p>
+    </header>
+
+    <div class="panel">
+      <div class="controls">
+        <div class="status"><span id="count">0</span> de 90 marcados</div>
+        <button class="reset" id="resetBtn" type="button">Reiniciar cartón</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <section class="called">
+      <h2>Números que salieron</h2>
+      <div class="called-list" id="calledList"></div>
+    </section>
+
+    <footer class="note">Tu progreso se guarda en este dispositivo</footer>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
