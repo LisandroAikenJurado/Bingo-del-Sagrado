@@ -14,6 +14,8 @@
   var calledList = document.getElementById('calledList');
   var countEl = document.getElementById('count');
   var resetBtn = document.getElementById('resetBtn');
+  var spotlight = document.getElementById('spotlight');
+  var temporizadorSpotlight = null;
 
   // --- Estado: números marcados, en el orden en que salieron ---
   var marcados = [];
@@ -59,6 +61,7 @@
   }
 
   /* --- Marcar y desmarcar --- */
+
   function alternarNumero(n) {
     var posicion = marcados.indexOf(n);
     if (posicion === -1) {
@@ -67,13 +70,6 @@
     } else {
       marcados.splice(posicion, 1);
     }
-    guardarEstado();
-    dibujar();
-  }
-
-
-  function reiniciar() {
-    marcados = [];
     guardarEstado();
     dibujar();
   }
@@ -103,6 +99,7 @@
     guardarEstado();
     dibujar();
   }
+
   /* --- Dibujado --- */
 
   function dibujar() {
