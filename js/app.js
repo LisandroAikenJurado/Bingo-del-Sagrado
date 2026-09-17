@@ -77,6 +77,31 @@
     dibujar();
   }
 
+  /* --- Número grande al marcar (dura 4 segundos) --- */
+
+  function mostrarSpotlight(n) {
+    // Si había uno en curso, lo cortamos para arrancar de cero.
+    if (temporizadorSpotlight) {
+      clearTimeout(temporizadorSpotlight);
+    }
+    spotlight.innerHTML = '';
+
+    var numGrande = document.createElement('div');
+    numGrande.className = 'num-grande';
+    numGrande.textContent = n;
+    spotlight.appendChild(numGrande);
+
+    temporizadorSpotlight = setTimeout(function () {
+      spotlight.innerHTML = '';
+      temporizadorSpotlight = null;
+    }, 4000);
+  }
+
+  function reiniciar() {
+    marcados = [];
+    guardarEstado();
+    dibujar();
+  }
   /* --- Dibujado --- */
 
   function dibujar() {
