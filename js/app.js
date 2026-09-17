@@ -59,17 +59,18 @@
   }
 
   /* --- Marcar y desmarcar --- */
-
   function alternarNumero(n) {
     var posicion = marcados.indexOf(n);
     if (posicion === -1) {
       marcados.push(n);
+      mostrarSpotlight(n);
     } else {
       marcados.splice(posicion, 1);
     }
     guardarEstado();
     dibujar();
   }
+
 
   function reiniciar() {
     marcados = [];
