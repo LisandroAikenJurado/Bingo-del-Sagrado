@@ -316,10 +316,8 @@ h1 {
 
 /* --- Responsive --- */
 @media (max-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 7px;
-  }
+  .grid { gap: 5px; }
+  .num { font-size: clamp(0.55rem, 3vw, 0.8rem); }
   :root { --logo-size: min(165vw, 800px); }
 }
 
